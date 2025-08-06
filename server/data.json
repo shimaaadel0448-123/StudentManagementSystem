@@ -1,0 +1,477 @@
+{
+  "exams": [
+    {
+      "id": "1",
+      "title": "Node.js",
+      "available": false,
+      "completed": false,
+      "examTime": 15,
+      "difficulty": "medium",
+      "numberOfQuestions": 3,
+      "time": 20,
+      "numOfStudents": 3,
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is Node.js primarily used for?",
+          "options": [
+            "Frontend development",
+            "Server-side scripting",
+            "Mobile apps",
+            "Databases"
+          ],
+          "correctAnswer": "Server-side scripting"
+        },
+        {
+          "id": 2,
+          "text": "Which module is used to work with file systems in Node.js?",
+          "options": [
+            "fs",
+            "http",
+            "url",
+            "path"
+          ],
+          "correctAnswer": "fs"
+        },
+        {
+          "id": 3,
+          "text": "What command is used to install a package locally?",
+          "options": [
+            "npm install package-name",
+            "npm global install package-name",
+            "install package-name",
+            "node install package-name"
+          ],
+          "correctAnswer": "npm install package-name"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "JavaScript Basics",
+      "available": true,
+      "completed": false,
+      "examTime": 10,
+      "difficulty": "easy",
+      "numberOfQuestions": 5,
+      "time": 15,
+      "numOfStudents": 1,
+      "questions": [
+        {
+          "id": 1,
+          "text": "Which keyword is used to declare a variable in JavaScript?",
+          "options": [
+            "int",
+            "let",
+            "var",
+            "Both B and C"
+          ],
+          "correctAnswer": "Both B and C"
+        },
+        {
+          "id": 2,
+          "text": "Which symbol is used for single-line comments?",
+          "options": [
+            "//",
+            "/*",
+            "#",
+            "<!--"
+          ],
+          "correctAnswer": "//"
+        },
+        {
+          "id": 3,
+          "text": "What is the output of 'typeof []'?",
+          "options": [
+            "array",
+            "object",
+            "undefined",
+            "list"
+          ],
+          "correctAnswer": "object"
+        },
+        {
+          "id": 4,
+          "text": "What is 'NaN' in JavaScript?",
+          "options": [
+            "A function",
+            "A string",
+            "Not a Number",
+            "Null"
+          ],
+          "correctAnswer": "Not a Number"
+        },
+        {
+          "id": 5,
+          "text": "Which function converts a string to an integer?",
+          "options": [
+            "parseInt()",
+            "parseFloat()",
+            "Number()",
+            "Math.floor()"
+          ],
+          "correctAnswer": "parseInt()"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "HTML & CSS",
+      "available": true,
+      "completed": false,
+      "examTime": 10,
+      "difficulty": "easy",
+      "numberOfQuestions": 4,
+      "time": 15,
+      "numOfStudents": 2,
+      "questions": [
+        {
+          "id": 1,
+          "text": "What does HTML stand for?",
+          "options": [
+            "Hyper Trainer Marking Language",
+            "Hyper Text Markup Language",
+            "Hyper Text Marketing Language",
+            "Hyper Text Markdown Language"
+          ],
+          "correctAnswer": "Hyper Text Markup Language"
+        },
+        {
+          "id": 2,
+          "text": "Which HTML tag is used to define an image?",
+          "options": [
+            "<img>",
+            "<image>",
+            "<pic>",
+            "<src>"
+          ],
+          "correctAnswer": "<img>"
+        },
+        {
+          "id": 3,
+          "text": "Which property is used in CSS to change text color?",
+          "options": [
+            "font-color",
+            "text-color",
+            "color",
+            "background-color"
+          ],
+          "correctAnswer": "color"
+        },
+        {
+          "id": 4,
+          "text": "What is the correct HTML element for inserting a line break?",
+          "options": [
+            "<break>",
+            "<br>",
+            "<lb>",
+            "<line>"
+          ],
+          "correctAnswer": "<br>"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "React.js Fundamentals",
+      "available": false,
+      "completed": true,
+      "examTime": 15,
+      "difficulty": "hard",
+      "numberOfQuestions": 10,
+      "numOfStudents": 1,
+      "time": 20,
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is the purpose of React?",
+          "options": [
+            "To style HTML",
+            "To manage databases",
+            "To build user interfaces",
+            "To handle backend logic"
+          ],
+          "correctAnswer": "To build user interfaces"
+        },
+        {
+          "id": 2,
+          "text": "Which method is used to create components in React?",
+          "options": [
+            "React.component()",
+            "ReactDOM.create()",
+            "React.createComponent()",
+            "React.Component"
+          ],
+          "correctAnswer": "React.Component"
+        },
+        {
+          "id": 3,
+          "text": "What is JSX?",
+          "options": [
+            "JavaScript XML",
+            "JavaScript Extension",
+            "JSON Extension",
+            "JS Editor"
+          ],
+          "correctAnswer": "JavaScript XML"
+        },
+        {
+          "id": 4,
+          "text": "Which hook is used to manage state in a functional component?",
+          "options": [
+            "useEffect",
+            "useState",
+            "useReducer",
+            "useContext"
+          ],
+          "correctAnswer": "useState"
+        },
+        {
+          "id": 5,
+          "text": "Which command creates a new React app?",
+          "options": [
+            "npm install react",
+            "npx create-react-app my-app",
+            "npm start react",
+            "react init my-app"
+          ],
+          "correctAnswer": "npx create-react-app my-app"
+        },
+        {
+          "id": 6,
+          "text": "Which of the following is a valid component name?",
+          "options": [
+            "header",
+            "HeaderComponent",
+            "header-component",
+            "componentHeader"
+          ],
+          "correctAnswer": "HeaderComponent"
+        },
+        {
+          "id": 7,
+          "text": "What does the useEffect hook do?",
+          "options": [
+            "Manages routing",
+            "Performs side effects in function components",
+            "Updates props",
+            "Creates context"
+          ],
+          "correctAnswer": "Performs side effects in function components"
+        },
+        {
+          "id": 8,
+          "text": "Which package is used for routing in React?",
+          "options": [
+            "react-router-dom",
+            "react-navigation",
+            "react-dom-router",
+            "router-react"
+          ],
+          "correctAnswer": "react-router-dom"
+        },
+        {
+          "id": 9,
+          "text": "Props in React are:",
+          "options": [
+            "Mutable",
+            "Read-only",
+            "Used for styling",
+            "Functions only"
+          ],
+          "correctAnswer": "Read-only"
+        },
+        {
+          "id": 10,
+          "text": "What is the virtual DOM?",
+          "options": [
+            "An API for DOM manipulation",
+            "A copy of the real DOM kept in memory",
+            "A new browser feature",
+            "A real DOM element"
+          ],
+          "correctAnswer": "A copy of the real DOM kept in memory"
+        }
+      ]
+    },
+    {
+      "id": "1754507366837",
+      "title": "english",
+      "available": true,
+      "completed": false,
+      "examTime": 2,
+      "difficulty": "easy",
+      "numberOfQuestions": 1,
+      "time": 2,
+      "numOfStudents": 3,
+      "questions": [
+        {
+          "id": 1754507352760,
+          "text": "wer",
+          "options": [
+            "q",
+            "w",
+            "e",
+            "r"
+          ],
+          "correctAnswer": "r"
+        }
+      ]
+    }
+  ],
+  "user": [
+    {
+      "id": "3357",
+      "name": "shimaa adel",
+      "email": "shyma0448@gmail.com",
+      "password": "123456",
+      "available": false,
+      "completed": true,
+      "studentId": 3,
+      "completedExams": [
+        {
+          "examTitle": "test",
+          "score": 0
+        },
+        {
+          "examTitle": "Node.js",
+          "score": 0
+        },
+        {
+          "examTitle": "Node.js",
+          "score": 0
+        },
+        {
+          "examTitle": "Node.js",
+          "score": 1
+        },
+        {
+          "examTitle": "Node.js",
+          "score": 0
+        },
+        {
+          "examTitle": "JavaScript Basics",
+          "score": 0
+        },
+        {
+          "examTitle": "Node.js",
+          "score": 0
+        },
+        {
+          "examTitle": "ssssss",
+          "score": 1
+        },
+        {
+          "examTitle": "HTML & CSS",
+          "score": 2
+        },
+        {
+          "examTitle": "React.js Fundamentals",
+          "score": 3
+        },
+        {
+          "examTitle": "english",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "0237",
+      "name": "shimaa adel",
+      "email": "sara@gmail.com",
+      "password": "123456",
+      "available": true,
+      "completed": false,
+      "studentId": 2,
+      "completedExams": [
+        {
+          "examTitle": "test",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "7552",
+      "name": "Shimaa Adel",
+      "email": "shimaa@gmail.com",
+      "password": "123456",
+      "available": false,
+      "completed": true,
+      "studentId": 1,
+      "completedExams": [
+        {
+          "examTitle": "test",
+          "score": 0
+        },
+        {
+          "examTitle": "Node.js",
+          "score": 2
+        },
+        {
+          "examTitle": "ssssss",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "fee9",
+      "name": "zei Adel",
+      "email": "zienab@gmail.com",
+      "password": "123456",
+      "available": true,
+      "completed": false,
+      "studentId": 1,
+      "completedExams": [
+        {
+          "examTitle": "test",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "7221",
+      "name": "Shimaa Adel",
+      "email": "shyma@gmail.com",
+      "password": "123456",
+      "available": false,
+      "completed": true,
+      "studentId": 1,
+      "completedExams": [
+        {
+          "examTitle": "test",
+          "score": 0
+        },
+        {
+          "examTitle": "Node.js",
+          "score": 2
+        },
+        {
+          "examTitle": "HTML & CSS",
+          "score": 2
+        },
+        {
+          "examTitle": "JavaScript Basics",
+          "score": 1
+        },
+        {
+          "examTitle": "english",
+          "score": 0
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "5db0",
+      "userName": "Shimaa Adel",
+      "examTitle": "JavaScript Basics",
+      "score": 1
+    },
+    {
+      "id": "7258",
+      "userName": "Shimaa Adel",
+      "examTitle": "english",
+      "score": 0
+    }
+  ]
+}

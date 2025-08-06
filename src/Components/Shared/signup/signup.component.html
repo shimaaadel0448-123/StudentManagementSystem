@@ -1,0 +1,81 @@
+<div class="form-wrapper">
+  <div class="form-container container">
+    <h1 class="text-center">Register</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="row justify-content-center">
+        <div class="mb-3 col-lg-5">
+          <label class="form-label"><i class="bi bi-person" style="margin-right: 5px;"></i>First Name</label>
+          <input type="text" class="form-control" placeholder="Enter Your First Name" formControlName="Name">
+          <div *ngIf="getName?.touched">
+            <div *ngIf="getName?.errors?.['required']" class="text-danger">First name is required.</div>
+            <div *ngIf="getName?.errors?.['minlength']" class="text-danger">Must be at least 3 characters.</div>
+            <div *ngIf="getName?.errors?.['maxlength']" class="text-danger">Cannot be more than 6 characters.</div>
+          </div>
+        </div>
+        <div class="mb-3 col-lg-5">
+          <label class="form-label"><i class="bi bi-person" style="margin-right: 5px;"></i>Last Name</label>
+          <input type="text" class="form-control" placeholder="Enter Your Last Name" formControlName="LastName">
+          <div *ngIf="getLastName?.touched">
+            <div *ngIf="getLastName?.errors?.['required']" class="text-danger">Last name is required.</div>
+            <div *ngIf="getLastName?.errors?.['minlength']" class="text-danger">Must be at least 3 characters.</div>
+            <div *ngIf="getLastName?.errors?.['maxlength']" class="text-danger">Cannot be more than 6 characters.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="mb-3 col-lg-5">
+          <label class="form-label"><i class="bi bi-envelope" style="margin-right: 5px;"></i>Email</label>
+          <input type="email" class="form-control" placeholder="Enter Your Email" formControlName="Email">
+          <div *ngIf="getEmail?.touched">
+            <div *ngIf="getEmail?.errors?.['required']" class="text-danger">Email is required.</div>
+            <div *ngIf="getEmail?.errors?.['email']" class="text-danger">Enter a valid Email</div>
+          </div>
+        </div>
+
+        <div class="mb-3 col-lg-5">
+          <label class="form-label"><i class="bi bi-person-vcard-fill" style="margin-right: 5px;"></i>Student ID</label>
+          <input type="text" class="form-control" placeholder="Enter Your Student ID" formControlName="StudentId">
+          <div *ngIf="getStudentId?.touched">
+            <div *ngIf="getStudentId?.errors?.['required']" class="text-danger">Enter Your Id.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="mb-3 col-lg-5">
+          <label class="form-label"><i class="bi bi-lock" style="margin-right: 5px;"></i>Password</label>
+          <input type="password" class="form-control" placeholder="Enter Your Password" formControlName="Password">
+          <div *ngIf="getPassword?.touched">
+            <div *ngIf="getPassword?.errors?.['required']" class="text-danger">Password is required.</div>
+            <div *ngIf="getPassword?.errors?.['minlength']" class="text-danger">Password must be at least 3 characters.</div>
+            <div *ngIf="getPassword?.errors?.['maxlength']" class="text-danger">Password cannot be more than 6 characters.</div>
+          </div>
+        </div>
+        <div class="mb-3 col-lg-5">
+          <label class="form-label"><i class="bi bi-lock" style="margin-right: 5px;"></i>Confirm Password</label>
+          <input type="password" class="form-control" placeholder="Confirm Your Password" formControlName="confirmPassword">
+          <div *ngIf="registerForm.errors?.['passwordMismatch'] && (getConfirmPassword?.touched || getConfirmPassword?.dirty)" class="text-danger mt-1">
+            Password and Confirm Password do not match.
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-5">
+          <button type="submit" class="btn w-100 py-2 fs-5 rounded-pill shadow">
+            <i class="bi bi-check-circle w-sm-50" style="margin-right: 8px;"></i> Register Now
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div>
+          <div class="py-2 text-center" style="color: #7593B0;">
+            Already have an account ?
+            <a style="color: #89467C; cursor: pointer;" routerLink="/login">Login</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

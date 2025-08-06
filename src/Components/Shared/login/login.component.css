@@ -1,0 +1,13 @@
+.form-wrapper {
+   background-color: #EAF5F2;
+   min-height: 100vh;
+
+}
+input::placeholder
+{
+    color: #676767;
+}
+button:hover
+{
+  background-color: #822b71 !important;
+}

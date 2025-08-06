@@ -1,0 +1,82 @@
+<div class="form-wrapper">
+  <div class="form-container container">
+    <h2 class="text-center mb-4">
+      {{ step === 1 ? (examId === 0 ? 'Add Exam' : 'Edit Exam') : 'Add Questions' }}
+    </h2>
+
+    <!-- ✅ الخطوة 1: بيانات الامتحان -->
+    <form *ngIf="step === 1" [formGroup]="formData" (ngSubmit)="goToQuestions()">
+      <div class="row justify-content-center">
+        <div class="mb-3 col-lg-4">
+          <label class="form-label">Exam Title</label>
+          <input type="text" class="form-control" formControlName="title" placeholder="Enter Exam Title" required>
+        </div>
+
+        <div class="mb-3 col-lg-4">
+          <label class="form-label">Exam Time (min)</label>
+          <input type="number" class="form-control" formControlName="time" placeholder="e.g. 10" min="1">
+        </div>
+
+        <div class="mb-3 col-lg-4">
+          <label class="form-label">Number of Questions</label>
+          <input type="number" class="form-control" formControlName="numberOfQuestions" placeholder="e.g. 10" min="1">
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="mb-3 col-lg-4">
+          <label class="form-label">Difficulty</label>
+          <select class="form-select" formControlName="difficulty">
+            <option value="" disabled>Select Difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <div class="mb-3 col-lg-4">
+          <label class="form-label">Availability</label>
+          <select class="form-select" formControlName="available">
+            <option [value]="true">Available</option>
+            <option [value]="false">Not Available</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <button type="submit" class="btn btn-primary w-100 py-2 fs-5 rounded-pill shadow">
+            Next ➡️
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- ✅ الخطوة 2: إضافة الأسئلة -->
+    <form *ngIf="step === 2" [formGroup]="questionsForm" (ngSubmit)="saveExam()">
+      <div formArrayName="questions" *ngFor="let question of questionsArray.controls; let i = index">
+        <div [formGroupName]="i" class="card p-3 mb-3 shadow-sm">
+          <h5>Question {{ i + 1 }}</h5>
+          <input type="text" class="form-control mb-2" formControlName="text" placeholder="Enter question text">
+
+          <!-- خيارات السؤال -->
+          <div class="row" formArrayName="options">
+            <div class="col-md-3" *ngFor="let option of getOptions(i).controls; let j = index">
+              <input type="text" class="form-control mb-2" [formControlName]="j" placeholder="Option {{ j+1 }}">
+            </div>
+          </div>
+
+          <input type="text" class="form-control" formControlName="correctAnswer" placeholder="Correct answer">
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <button type="submit" class="btn btn-success w-100 py-2 fs-5 rounded-pill shadow">
+            ✅ Save Exam
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

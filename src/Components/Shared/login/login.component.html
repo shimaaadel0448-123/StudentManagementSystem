@@ -1,0 +1,50 @@
+<div class="form-wrapper d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa;">
+  <div class="card p-4 shadow rounded-4 d-flex flex-md-row flex-column align-items-center" style="max-width: 1100px; background-color: white;">
+
+    <div class="img-container text-center mb-4 mb-md-0 me-md-4">
+      <img src="assets/images/Exams-amico.png" alt="Login Illustration" class="img-fluid rounded-4" style="max-width: 350px;">
+    </div>
+
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="w-100" style="max-width: 380px;">
+      <h5 class="text-center mb-4">Login</h5>
+
+      <div class="mb-4">
+        <input
+          type="email"
+          class="form-control rounded-pill"
+          placeholder="Enter Your Email"
+          formControlName="Email"
+        />
+        <div *ngIf="getEmail?.touched">
+          <div class="text-danger" *ngIf="getEmail?.hasError('email')">Not a valid email</div>
+          <div class="text-danger" *ngIf="getEmail?.hasError('required')">Enter your email</div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <input
+          type="password"
+          class="form-control rounded-pill"
+          placeholder="Enter Your Password"
+          formControlName="Password"
+        />
+        <div class="text-danger" *ngIf="getPassword?.touched && getPassword?.hasError('required')">
+          Enter your password
+        </div>
+      </div>
+
+      <div class="mb-4 text-center">
+        <button type="submit" class="btn w-100 fs-5 rounded-pill shadow" style="background-color: #89467C; color: white;">
+          Login
+        </button>
+      </div>
+
+      <div class="text-center" style="color: #7593B0;">
+        Don't have an account?
+        <a style="color: #89467C; cursor: pointer;" routerLink="/signup">SignUp</a>
+      </div>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="Wrapper py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 emax p-5 shadow text-center">
+        <h2 class="mb-4" style="color: #782c6a;">📊 Exam Result</h2>
+
+        <div class="score-box mb-4 p-4">
+          <h3 class="score-text mb-2">Your Score</h3>
+          <div class="score-value">{{ score }} / {{total}}</div>
+        </div>
+
+        <p class="lead mt-3 text-dark">
+          {{ getMessage() }}
+        </p>
+
+        <a [routerLink]="'/allExams'" class="btn btn-outline-success mt-4">
+          🔁 Back To Exam Page
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

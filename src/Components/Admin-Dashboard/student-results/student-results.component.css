@@ -1,0 +1,64 @@
+.students-wrapper {
+  padding: 40px 20px;
+  background-color: #eaf5f2;
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+  color: #4b4b5a;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.result-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  border-left: 6px solid #9e4f8f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+}
+
+.result-card h3 {
+  margin-top: 0;
+  color: #782c6a;
+}
+
+.result-card p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.result-card span {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Score color indicators */
+.low-score {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.medium-score {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+}
+
+.high-score {
+  background-color: #dff0d8;
+  color: #3c763d;
+}

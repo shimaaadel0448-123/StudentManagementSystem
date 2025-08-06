@@ -1,0 +1,11 @@
+<nav class="admin-sidebar" [class.open]="isMenuOpen">
+  <div class="sidebar-header">
+    <h2 class="sidebar-logo">Admin Panel</h2>
+    <button class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">☰</button>
+  </div>
+  <ul class="sidebar-menu">
+    <a [routerLink]="['/admin','exams']" routerLinkActive="active-link">📚 All Exams</a>
+    <a [routerLink]="['/admin','results']" routerLinkActive="active-link">📊 All Results</a>
+    <a [routerLink]="['/admin','add-exam']" routerLinkActive="active-link">➕ Add Exam</a>
+  </ul>
+</nav>

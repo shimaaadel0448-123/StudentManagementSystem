@@ -1,0 +1,35 @@
+.Wrapper {
+  background-color: #EAF5F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.emax {
+  background-color: #fff;
+  border-radius: 20px;
+  color: #333;
+}
+
+.score-box {
+  background-color: #F3EAF4;
+  border-radius: 15px;
+  border: 2px solid #782c6a;
+}
+
+.score-text {
+  color: #782c6a;
+  font-weight: bold;
+}
+
+.score-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.btn-outline-success {
+  border-radius: 12px;
+  font-weight: 600;
+}

@@ -1,0 +1,95 @@
+<div class="admin-layout">
+  <div class="admin-content">
+    <div class="header-row">
+      <h2 class="page-title">📚 All Exams</h2>
+      <button class="add-btn" [routerLink]="['/admin','add-exam']">
+        <i class="fas fa-plus-circle"></i> Add New Exam
+      </button>
+    </div>
+
+    <div class="exam-cards">
+      <div class="exam-card" *ngFor="let exam of exams">
+        <div class="title-section">
+          <h3 class="exam-title">{{ exam.title }}</h3>
+        </div>
+        <div class="card-body">
+          <div class="info-item">
+            <span class="icon icon-difficulty"><i class="fas fa-signal"></i></span>
+            <span>{{ exam.difficulty | titlecase }}</span>
+          </div>
+          <div class="info-item">
+            <span class="icon icon-time"><i class="fas fa-clock"></i></span>
+            <span>{{ exam.examTime }} Minutes </span>
+          </div>
+          <div class="info-item">
+            <span class="icon icon-questions"><i class="fas fa-question-circle"></i></span>
+            <span>{{ exam.numberOfQuestions }} Questions</span>
+          </div>
+          <div class="info-item">
+            <span class="icon icon-students"><i class="fas fa-users"></i></span>
+            <span>{{ exam.numOfStudents || 0 }} Students</span>
+          </div>
+          <div class="info-item">
+            <span class="icon icon-availability"><i class="fas fa-toggle-on"></i></span>
+            <span [ngClass]="exam.available ? 'status-available' : 'status-unavailable'">
+              {{ exam.available ? 'Available' : 'Not Available' }}
+            </span>
+          </div>
+
+        </div>
+        <div class="action-buttons">
+          <button class="edit-btn" (click)="openModal(exam)">
+            <i class="fas fa-edit"></i> Edit
+          </button>
+
+          <button class="delete-btn" (click)="deleteExam(exam.id)">
+            <i class="fas fa-trash"></i> Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal-overlay" *ngIf="isModalOpen">
+  <div class="modal-content">
+    <h2 class="modal-title">✏️ Edit Exam</h2>
+    <form>
+      <div class="form-group">
+        <label>Title:</label>
+        <input type="text" [(ngModel)]="selectedExam.title" name="title" placeholder="Enter exam title">
+      </div>
+
+      <div class="form-group">
+        <label>Difficulty:</label>
+        <select [(ngModel)]="selectedExam.difficulty" name="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Exam Time (Minutes):</label>
+        <input type="number" [(ngModel)]="selectedExam.examTime" name="examTime" placeholder="e.g. 60">
+      </div>
+
+      <div class="form-group">
+        <label>Available:</label>
+        <select [(ngModel)]="selectedExam.available" name="available">
+          <option [ngValue]="true">Available</option>
+          <option [ngValue]="false">Not Available</option>
+        </select>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn save-btn" (click)="saveChanges()">
+          💾 Save
+        </button>
+        <button type="button" class="btn cancel-btn" (click)="closeModal()">
+          ❌ Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

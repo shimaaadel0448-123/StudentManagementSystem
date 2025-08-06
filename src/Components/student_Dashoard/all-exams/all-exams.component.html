@@ -1,0 +1,58 @@
+<div class="header-section text-center mb-5 px-3">
+  <img src="assets/images/Exams-bro.png" alt="Exams Illustration" class="header-image img-fluid mb-3"
+    style="max-width: 300px; width: 100%; height: auto;">
+  <h1 class="main-title fw-bold">Explore Our Exams</h1>
+  <p class="subtitle text-muted">Choose your exam and start practicing now!</p>
+</div>
+
+<div class="cards-wrapper container">
+  <div class="row justify-content-center">
+    <div class="exam-card col-12 col-sm-8 col-md-6 col-lg-4" *ngFor="let exam of exams">
+      <div class="card-content border rounded p-4 shadow-sm bg-white h-100 d-flex flex-column">
+
+        <h3 class="exam-title mb-3" style="color:#9E4F8F;">
+          <i class="fas fa-book me-2" style="color:#6c757d;"></i>{{ exam.title }}
+        </h3>
+
+        <p class="exam-info mb-2">
+          <i class="fas fa-signal me-2" style="color:#20c997;"></i>
+          <strong>Difficulty:</strong> {{ exam.difficulty | titlecase }}
+        </p>
+
+        <p class="exam-info mb-2">
+          <i class="fas fa-clock me-2" style="color:#17a2b8;"></i>
+          <strong>Time:</strong> {{ exam.time }} mins
+        </p>
+
+        <p class="exam-info mb-2">
+          <i class="fas fa-question-circle me-2" style="color:#ffc107;"></i>
+          <strong>Questions:</strong> {{ exam.numberOfQuestions }}
+        </p>
+
+        <p class="exam-info mb-2">
+          <i class="fas fa-check-circle me-2" style="color:#28a745;"></i>
+          <strong>Available:</strong>
+          <span [ngClass]="exam.available ? 'text-success' : 'text-danger'">
+            {{ exam.available ? 'Yes' : 'No' }}
+          </span>
+        </p>
+
+        <p class="exam-info mb-4">
+          <i class="fas fa-tasks me-2" style="color:#6f42c1;"></i>
+          <strong>Status:</strong>
+          <span [ngClass]="exam.completed ? 'text-success' : 'text-muted'">
+            {{ exam.completed ? 'Completed' : 'Not Completed' }}
+          </span>
+        </p>
+
+        <button *ngIf="!exam.completed" class="btn btn-primary mt-auto w-100" [routerLink]="['/exam', exam.id]">
+          <i class="fas fa-play-circle me-2"></i>Start Exam
+        </button>
+
+        <div *ngIf="exam.completed" class="btn btn-success mt-auto w-100 disabled">
+          <i class="fas fa-check-circle me-2"></i>Completed
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

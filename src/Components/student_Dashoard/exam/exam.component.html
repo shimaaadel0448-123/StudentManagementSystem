@@ -1,0 +1,42 @@
+<form [formGroup]="formQuestion" (ngSubmit)="onSubmit()" *ngIf="examDetails">
+  <div style="width: 100%; margin: 10px; max-width: 700px;">
+    <div class="p-3 rounded-top-end rounded-top-start"
+      style="background-color: #EAF5F2; border: none; border-top-left-radius: 1rem; border-top-right-radius: 1rem;">
+      <h5 class="mb-2">Practice Questions</h5>
+      <Span class="mb-3"> Question {{currentQuestionIndex+1}} Of {{examDetails.questions.length}} </Span>
+
+    </div>
+    <div class="text-end text-danger fw-bold px-3 pt-2">
+      Time Left: {{ timeLeft * 1000 | date:'mm:ss':'UTC' }}
+    </div>
+    <div class="card-body m-3">
+      <h5 class="card-title">
+        {{ examDetails.questions[currentQuestionIndex].text }}
+      </h5>
+      <div class="my-4">
+        <div *ngFor="let option of examDetails.questions[currentQuestionIndex].options" class="form-check my-2">
+          <input type="radio" class="form-check-input" [id]="'question_' + currentQuestionIndex + '_option_' + option"
+            [formControlName]="'question_' + currentQuestionIndex" [value]="option"
+            [name]="'question_' + currentQuestionIndex" />
+          <label class="form-check-label" [for]="'question_' + currentQuestionIndex + '_option_' + option">
+            {{ option }}
+          </label>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between my-5">
+        <button type="button" (click)="previousQuestion()" class="btn"
+          style="background-color: rgb(142, 143, 144); color: white;" [disabled]="currentQuestionIndex === 0">
+          Previous
+        </button>
+
+        <button type="button" *ngIf="currentQuestionIndex < examDetails.questions.length - 1" (click)="nextQuestion()"
+          class="btn btn-primary">Next</button>
+
+        <button *ngIf="currentQuestionIndex === examDetails.questions.length - 1" class="btn btn-success" type="submit"
+          [disabled]="!formQuestion.valid">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

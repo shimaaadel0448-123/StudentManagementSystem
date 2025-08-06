@@ -1,0 +1,33 @@
+.role-wrapper {
+  background-color: #EAF5F2;
+
+}
+
+.role-card {
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.btn-role {
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-role.student {
+  background-color: #782c6a;
+  color: white;
+}
+
+.btn-role.admin {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-role:hover {
+  transform: scale(1.05);
+}

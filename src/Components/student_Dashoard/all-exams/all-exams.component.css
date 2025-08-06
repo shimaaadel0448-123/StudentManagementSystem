@@ -1,0 +1,115 @@
+/* Header Image Section */
+.header-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #eef5f2;
+}
+
+.header-image {
+  max-width: 300px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Cards Wrapper */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+.cards-wrapper .exam-card {
+  margin-bottom: 1.5rem; /* مسافة عمودية بين الكروت */
+  padding: 0 0.75rem; /* مسافة أفقية بين الكروت */
+}
+
+/* Individual Card */
+.exam-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.exam-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Content */
+.exam-title {
+  font-size: 1.5rem;
+  color: #9E4F8F;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.exam-info {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #444;
+}
+
+/* Labels */
+.available {
+  color: green;
+  font-weight: bold;
+}
+
+.not-available {
+  color: red;
+  font-weight: bold;
+}
+
+.completed {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.not-completed {
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* Button */
+.start-btn {
+  margin-top: 15px;
+  background-color: #9E4F8F;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.start-btn:hover {
+  background-color: #782c6a;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
